@@ -1,0 +1,244 @@
+@font-face {
+    font-family: instagram;
+    src: url(./instagram-new/Demo_Fonts/Fontspring-DEMO-blue_vinyl_regular_ps_ot.otf);
+}
+
+p {
+    margin: 5px 0;
+}
+
+#canvas {
+    width: 70px;
+    height: 70px;
+    margin-top: 15px;
+}
+
+body {
+    margin: 0;
+    font-family: 'Montserrat', sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    background-color: #f0f0f0;
+    margin-top: 60px;
+    overflow: hidden;
+}
+
+#zgornji-plato{
+    position: fixed; 
+    top: 0;
+    left: 0;
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding: 0.01vh;
+    background: linear-gradient(45deg, #ff0000, #0000ff);
+    color: white;
+    font-family: instagram;
+}
+
+.laptop {
+    position: relative;
+    width: 50vw;
+    height: 80vh;
+    background-color: #333;
+    border-radius: 2vh;
+    box-shadow: 0px 10px 30px rgba(0, 0, 0, 0.3);
+    display: flex;
+    justify-content: space-around;
+}
+
+.screen {
+    margin-top: 1vh;
+    background-color: #fff;
+    border-radius: 1.5vh;
+    overflow: hidden;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 2vh 1vw;
+    flex-direction: column;
+    width: 46.3vw;
+    height: 46.3vh;
+}
+
+.instagram-page {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    width: 100%;
+}
+
+.instagram-header {
+    display: flex;
+    align-items: center;
+    padding: 0.01vh;
+    background: linear-gradient(45deg, #ff0000, #0000ff);
+    color: white;
+    font-family: instagram;
+    border-radius: 5px;
+    border: #797979 0.1px solid;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+.laptop .base {
+    bottom: 0;
+    left: 10%;
+    right: 10%;
+    height: 2vh;
+    background-color: #444;
+    border-radius: 0 0 20px 20px;
+    box-shadow: 0px 3px 10px rgba(0, 0, 0, 0.2);
+}
+
+.logo-container {
+    display: flex;
+    align-items: center;
+    gap: 10px;
+}
+
+.logo-container h1 {
+    font-size: 1.5rem;
+    margin: 0;
+}
+
+.content {
+    flex-grow: 1;
+    overflow-y: auto;
+    padding: 10px;
+}
+
+.post {
+    border: 1px solid #ddd;
+    border-radius: 5px;
+    margin-bottom: -10px;
+    background-color: #fff;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+}
+
+.post-header {
+    display: flex;
+    align-items: center;
+    padding: 10px;
+}
+
+.profile-pic {
+    width: 40px;
+    height: 40px;
+    background-color: #ddd;
+    border-radius: 50%;
+    margin-right: 10px;
+    background: url(pfp.jpg) no-repeat;
+    background-size: contain;
+}
+
+.username {
+    font-weight: 600;
+}
+
+.post-image {
+    height: 200px;
+    background: url(Post.png) no-repeat;
+    background-size: contain;
+    position: relative;
+}
+.post-image .lajk{
+    position: absolute;
+    bottom: -10px;
+    left: 0;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+.post-image .lajk img{
+    width: 25px;
+    height: 25px;
+    cursor: pointer;
+}
+.post-image .comment {
+    position: absolute;
+    bottom: -10px;
+    left: 20px;
+    width: 40px;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+
+}
+.post-image .comment img{
+    width: 22px;
+    height: 22px;
+}
+
+.post-footer {
+    padding: 10px;
+    font-size: 0.9rem;
+    color: #555;
+}
+
+.controls {
+    padding: 10px;
+    display: flex;
+    gap: 10px;
+    justify-content: space-between;
+}
+
+.gap{
+    position: absolute;
+    top: 66.5%;
+    height: 20px; /* Adjust height as needed */
+    background-color: #333; /* Same as the laptop base color for seamless blending */
+    width: 80%; /* Optional: Adjust width if necessary */
+    border-radius: 5px; /* Optional: To match the rounded corners of other elements */
+    background-color: white;
+    z-index: 3;
+    height: 1%;
+    margin-top: 0.5%;
+}
+
+.keyboard {
+    position: absolute;
+    bottom: 2%;
+    left: 5%;
+    right: 5%;
+    background-color: #222;
+    border-radius: 0.5vh;
+    display: flex;
+    flex-direction: column;
+    padding: 1%;
+    padding-top: 0;
+}
+
+.key-row {
+    display: flex;
+    justify-content: center;
+    gap: 1.2%;
+    margin-top: 1.5%;
+    width: 100%;
+}
+
+.key {
+    position: relative;
+    height: 3vh;
+    width: 6vw;
+    background-color: #444;
+    border-radius: 0.5vh;
+    box-shadow: 0px 2px 5px rgba(0, 0, 0, 0.2);
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    transition: background-color 0.3s ease;
+}
+
+.key:hover {
+    cursor: pointer;
+    background-color: #333;
+}
+
+.key.space {
+    min-width: 50%;
+    height: 3vh;
+    max-width: 40%;
+}
